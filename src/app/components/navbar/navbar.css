@@ -1,0 +1,22 @@
+
+.site-header { background: rgba(255, 253, 249, .94); border-bottom: 1px solid #dfe8e2; position: sticky; top: 0; z-index: 10; backdrop-filter: blur(14px); }
+.nav-shell { align-items: center; display: flex; justify-content: space-between; margin: auto; max-width: 1240px; min-height: 78px; padding: 0 1.25rem; }
+.brand { align-items: center; color: #102b2b; display: flex; gap: .65rem; line-height: 1; text-decoration: none; }
+.brand-logo { display: block; height: 42px; object-fit: contain; width: 42px; }
+.brand strong { font-weight: 800; }
+.brand small { color: #6d8079; display: block; font-size: .56rem; letter-spacing: .08em; margin-top: .3rem; text-transform: uppercase; }
+.menu { align-items: center; display: none; gap: 1.25rem; }
+.menu a, .phone-link { color: #36524e; font-size: .75rem; text-decoration: none; }
+.menu a:hover, .menu a.active { color: #d07831; }
+.phone-link { font-weight: 700; }
+.phone-link span { color: #81928c; display: block; font-size: .6rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; }
+.desktop-actions { align-items: center; display: none; gap: 1rem; }
+.button { align-items: center; border: 1px solid transparent; display: inline-flex; font-size: .73rem; font-weight: 800; gap: .65rem; justify-content: center; letter-spacing: .05em; padding: .9rem 1.15rem; text-decoration: none; text-transform: uppercase; transition: transform .2s, background .2s; }
+.button:hover { transform: translateY(-2px); }
+.button-whatsapp { background: #3a8b70; color: #fff !important; }
+.button-outline { border-color: #b9cec5; color: #102b2b; }
+.mobile-actions { display: flex; gap: .6rem; margin-top: 1rem; }
+.menu-toggle { background: none; border: 0; cursor: pointer; display: flex; flex-direction: column; gap: 5px; padding: .5rem; }
+.menu-toggle span { background: #102b2b; display: block; height: 2px; width: 25px; }
+.menu.menu-open { background: #fffdf9; display: flex; flex-direction: column; left: 0; padding: 1.25rem; position: absolute; right: 0; top: 78px; }
+@media (min-width: 1100px) { .menu { display: flex; flex: 1; justify-content: center; } .desktop-actions { display: flex; } .menu-toggle { display: none; } .nav-shell { padding: 0 2rem; } }

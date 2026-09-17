@@ -1,0 +1,11 @@
+.service-hero { background: #e8f0eb; padding: 9rem 0 7rem; }
+.service-hero h1 { color: #102b2b; font-size: clamp(3rem, 8vw, 7rem); letter-spacing: -.06em; line-height: .95; margin: 1rem 0 1.5rem; max-width: 800px; }
+.service-hero > .container > p:not(.eyebrow) { color: #4a6561; font-size: 1.2rem; line-height: 1.65; max-width: 610px; }
+.service-hero .hero-actions { margin-top: 2rem; }
+.service-content { min-height: 32rem; }
+.service-content-grid { display: grid; gap: 2rem; }
+.service-content h2 { font-size: clamp(2.3rem, 5vw, 4rem); max-width: 420px; }
+.service-cta { background: #102b2b; color: #fff; padding: 6rem 0; }
+.service-cta h2 { font-size: clamp(2.8rem, 6vw, 5rem); line-height: .95; letter-spacing: -.05em; margin: 1rem 0 2rem; }
+.service-cta h2 em { color: #f5b544; font-style: normal; }
+@media (min-width: 700px) { .service-content-grid { grid-template-columns: 1fr 1fr; gap: 5rem; } }

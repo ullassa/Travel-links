@@ -1,0 +1,22 @@
+<header class="site-header">
+  <nav class="nav-shell" aria-label="Main navigation">
+    <a class="brand" routerLink="/" (click)="closeMenu()" aria-label="Travel Links home">
+      <img class="brand-logo" ngSrc="/images/logo.jpeg" width="48" height="48" priority alt="Travel Links logo">
+      <span><strong>Travel</strong> Links<small>Your journey, handled.</small></span>
+    </a>
+    <button class="menu-toggle" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="menu" [class.menu-open]="menuOpen()">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a>
+      <a href="/#cabs" (click)="closeMenu()">Cabs</a>
+      <a href="/#tempo-traveller" (click)="closeMenu()">Tempo Traveller</a>
+      <a href="/#buses" (click)="closeMenu()">Buses</a>
+      <a href="/#tours" (click)="closeMenu()">Tours</a>
+      <a href="/#corporate" (click)="closeMenu()">Corporate</a>
+      <a href="/#about" (click)="closeMenu()">About Us</a>
+      <a href="/#contact" (click)="closeMenu()">Contact</a>
+    </div>
+    <a class="button button-whatsapp nav-whatsapp" href="https://wa.me/919876543210" target="_blank" rel="noreferrer" aria-label="Chat with Travel Links on WhatsApp">WhatsApp</a>
+  </nav>
+</header>
