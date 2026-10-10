@@ -1,163 +1,127 @@
-<section class="hero">
-  <div class="hero-image"></div>
-  <div class="container hero-content">
-    <p class="eyebrow light-eyebrow">
-      Travel Links
-      <span>•</span>
-      South India
-    </p>
-    <h1>
-      Your travel.
-      <br />
-      <em>Our responsibility.</em>
-    </h1>
-    <p class="hero-copy">
-      Thoughtful transport for the journeys that matter, from a quick airport pickup to a week on
-      the road with your favourite people.
-    </p>
-    <div class="hero-actions">
-      <a class="button button-primary" href="tel:+919876543210">
-        Call Now
-        <span>↗</span>
-      </a>
-      <a
-        class="button button-ghost"
-        href="https://wa.me/919876543210"
-        target="_blank"
-        rel="noreferrer"
-      >
-        WhatsApp Us
-      </a>
-    </div>
-    <p class="hero-note">
-      Cabs
-      <span>•</span>
-      Tempo Travellers
-      <span>•</span>
-      Buses
-      <span>•</span>
-      Tours
-      <span>•</span>
-      Corporate Travel
-    </p>
-  </div>
-  <div class="hero-scroll">
-    Scroll to explore
-    <span>↓</span>
-  </div>
-</section>
-
-<section id="about" class="section intro-section">
-  <div class="container intro-grid">
-    <div>
-      <p class="eyebrow">What we do</p>
-      <h2>The road feels better when everything is taken care of.</h2>
-    </div>
-    <div>
-      <p class="lead">
-        Travel Links makes getting there feel simple. We pair well-kept vehicles with experienced
-        drivers and thoughtful coordination, so your time belongs to the journey.
-      </p>
-      <a class="text-link" routerLink="/about">
-        More about us
-        <span>↗</span>
-      </a>
+<section class="fleet-hero">
+  <div class="fleet-hero-image"></div>
+  <div class="container fleet-hero-content">
+    <p class="fleet-eyebrow"><span></span> Our fleet <span></span></p>
+    <h1>Cars</h1>
+    <p>Comfortable. Reliable. Perfect for Every Journey.</p>
+    <small>Choose from our wide range of cars, ideal for city travel, outstation trips,<br class="desktop-only" /> corporate travel, family trips and more.</small>
+    <div class="fleet-highlights" aria-label="Fleet features">
+      <span><b>▣</b> AC &amp; Non AC<br />Options</span>
+      <span><b>⌁</b> Comfortable<br />Seating</span>
+      <span><b>▥</b> Spacious<br />Luggage Space</span>
+      <span><b>♢</b> Experienced<br />Drivers</span>
+      <span><b>✦</b> Well-Maintained<br />Vehicles</span>
     </div>
   </div>
 </section>
 
-<section id="services" class="section services-section">
+<section id="cabs" class="fleet-catalog">
   <div class="container">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Our services</p>
-        <h2>
-          One trusted partner.
-          <br />
-          <em>Every kind of road.</em>
-        </h2>
-      </div>
-      <a class="text-link desktop-only" routerLink="/contact">
-        Plan your journey
-        <span>↗</span>
-      </a>
+    <div class="fleet-tabs" role="tablist" aria-label="Cab type">
+      <button
+        class="fleet-tab"
+        [class.active]="activeCabType() === 'AC'"
+        type="button"
+        role="tab"
+        [attr.aria-selected]="activeCabType() === 'AC'"
+        (click)="selectCabType('AC')"
+      >AC</button>
+      <button
+        class="fleet-tab"
+        [class.active]="activeCabType() === 'NON AC'"
+        type="button"
+        role="tab"
+        [attr.aria-selected]="activeCabType() === 'NON AC'"
+        (click)="selectCabType('NON AC')"
+      >NON AC</button>
     </div>
-    <div class="service-grid">
-      <a class="service-card service-card-dark" href="/#cabs">
-        <span class="service-number">01</span>
-        <span class="service-icon">↗</span>
-        <h3>Cabs</h3>
-        <p>City rides, airport transfers and outstation journeys without the waiting.</p>
-        <span class="card-link">Explore cabs</span>
-      </a>
-      <a class="service-card" href="/#tempo-traveller">
-        <span class="service-number">02</span>
-        <span class="service-icon">↗</span>
-        <h3>Tempo Traveller</h3>
-        <p>More room for your people, your bags and the moments in between.</p>
-        <span class="card-link">Find your vehicle</span>
-      </a>
-      <a class="service-card" href="/#buses">
-        <span class="service-number">03</span>
-        <span class="service-icon">↗</span>
-        <h3>Buses</h3>
-        <p>Comfortable, coordinated group transport for every kind of occasion.</p>
-        <span class="card-link">See bus options</span>
-      </a>
-      <a class="service-card" routerLink="/corporate">
-        <span class="service-number">04</span>
-        <span class="service-icon">↗</span>
-        <h3>Corporate travel</h3>
-        <p>Professional mobility that keeps your team on schedule and at ease.</p>
-        <span class="card-link">Talk to our team</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="section vehicles-section">
-  <div class="container">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Travel your way</p>
-        <h2>
-          Vehicles made for
-          <br />
-          <em>the whole crew.</em>
-        </h2>
-      </div>
-      <p class="heading-note">
-        Placeholder fleet details are ready to be replaced with your actual vehicle list.
-      </p>
-    </div>
-    @for (group of vehicleGroups; track group.name) {
-      <div [id]="group.id" class="vehicle-group">
-        <h3 class="vehicle-group-title">{{ group.name }}</h3>
-        <div class="vehicle-grid">
-          @for (vehicle of group.vehicles; track vehicle.name) {
-            <article class="vehicle-card">
-              <img [src]="vehicle.image" [alt]="vehicle.name" />
-              <div class="vehicle-body">
-                <div class="vehicle-meta">
-                  <span>{{ vehicle.seats }}</span>
-                  <span>Air conditioned</span>
-                </div>
-                <h3>{{ vehicle.name }}</h3>
-                <div class="vehicle-price">
-                  <span>Starting from</span>
-                  <strong>₹{{ vehicle.price }}</strong>
-                </div>
-                <p>{{ vehicle.description }}</p>
-                <a class="text-link" href="https://wa.me/919876543210" target="_blank" rel="noreferrer">
-                  Ask about this vehicle
-                  <span>↗</span>
-                </a>
-              </div>
-            </article>
-          }
+    <div class="fleet-grid">
+      @for (vehicle of filteredCabs(); track vehicle.name) {
+        <article class="fleet-card">
+          <img [src]="vehicle.image" [alt]="vehicle.name" />
+          <div class="fleet-card-body">
+            <h2>{{ vehicle.name }}</h2>
+            <span class="fleet-seats">♟ &nbsp; {{ vehicle.seats.replace(' + 1', '') }} Seater ({{ vehicle.seats.includes('4') ? 'Sedan' : 'MPV' }})</span>
+            <strong class="fleet-price">Starting from ₹{{ vehicle.price }}</strong>
+            <div class="fleet-card-features">
+              <span>{{ vehicle.isAc ? '❄ AC' : '○ NON AC' }}</span>
+              <span>◉ Spacious</span>
+              <span>▥ Luggage Space</span>
+            </div>
+            <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer">Get a Quote <span>→</span></a>
+          </div>
+        </article>
+      }
+      <article class="fleet-promo">
+        <div>
+          <strong>Your Journey<br /><em>Our Priority</em></strong>
+          <p>Whether it's a short city ride or a long outstation trip,<br class="desktop-only" /> our cars are ready to take you there safely and comfortably.</p>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer">Get a Quote <span>→</span></a>
         </div>
-      </div>
-    }
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="tempo-traveller" class="fleet-extra">
+  <div class="container">
+    <div class="fleet-extra-heading">
+      <p class="fleet-eyebrow"><span></span> Group travel</p>
+      <h2>Tempo Travellers</h2>
+    </div>
+    <div class="fleet-tabs" role="tablist" aria-label="Tempo traveller type">
+      <button class="fleet-tab" [class.active]="activeCabType() === 'AC'" type="button" role="tab" [attr.aria-selected]="activeCabType() === 'AC'" (click)="selectCabType('AC')">AC</button>
+      <button class="fleet-tab" [class.active]="activeCabType() === 'NON AC'" type="button" role="tab" [attr.aria-selected]="activeCabType() === 'NON AC'" (click)="selectCabType('NON AC')">NON AC</button>
+    </div>
+    <div class="fleet-extra-grid">
+      @for (vehicle of filteredTempoTravellers(); track vehicle.name) {
+        <article class="fleet-card">
+          <img [src]="vehicle.image" [alt]="vehicle.name" />
+          <div class="fleet-card-body">
+            <h2>{{ vehicle.name }}</h2>
+            <span class="fleet-seats">♟ &nbsp; {{ vehicle.seats.replace(' + 1', '') }} Seater</span>
+            <strong class="fleet-price">Starting from ₹{{ vehicle.price }}</strong>
+            <div class="fleet-card-features">
+              <span>{{ vehicle.isAc ? '❄ AC' : '○ NON AC' }}</span>
+              <span>◉ Spacious</span>
+              <span>▥ Luggage Space</span>
+            </div>
+            <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer">Get a Quote <span>→</span></a>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section id="buses" class="fleet-extra fleet-extra-alt">
+  <div class="container">
+    <div class="fleet-extra-heading">
+      <p class="fleet-eyebrow"><span></span> Group travel</p>
+      <h2>Buses</h2>
+    </div>
+    <div class="fleet-tabs" role="tablist" aria-label="Bus type">
+      <button class="fleet-tab" [class.active]="activeCabType() === 'AC'" type="button" role="tab" [attr.aria-selected]="activeCabType() === 'AC'" (click)="selectCabType('AC')">AC</button>
+      <button class="fleet-tab" [class.active]="activeCabType() === 'NON AC'" type="button" role="tab" [attr.aria-selected]="activeCabType() === 'NON AC'" (click)="selectCabType('NON AC')">NON AC</button>
+    </div>
+    <div class="fleet-extra-grid">
+      @for (vehicle of filteredBuses(); track vehicle.name) {
+        <article class="fleet-card">
+          <img [src]="vehicle.image" [alt]="vehicle.name" />
+          <div class="fleet-card-body">
+            <h2>{{ vehicle.name }}</h2>
+            <span class="fleet-seats">♟ &nbsp; {{ vehicle.seats.replace(' + 1', '') }} Seater</span>
+            <strong class="fleet-price">Starting from ₹{{ vehicle.price }}</strong>
+            <div class="fleet-card-features">
+              <span>{{ vehicle.isAc ? '❄ AC' : '○ NON AC' }}</span>
+              <span>◉ Spacious</span>
+              <span>▥ Luggage Space</span>
+            </div>
+            <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer">Get a Quote <span>→</span></a>
+          </div>
+        </article>
+      }
+    </div>
   </div>
 </section>
 

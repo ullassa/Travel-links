@@ -1,1 +1,41 @@
-/* The home page uses the shared visual language in src/styles.css. */
+.fleet-hero { background: #062e54; color: #fff; min-height: 285px; overflow: hidden; position: relative; }
+.fleet-hero-image { background: linear-gradient(90deg, rgba(3, 35, 65, .98) 0%, rgba(3, 35, 65, .82) 38%, rgba(3, 35, 65, .2) 100%), url('/images/cabs/Toyota Innova Hycross-01.jpeg') center 58% / cover; inset: 0; position: absolute; }
+.fleet-hero-content { min-height: 285px; padding-bottom: 3.7rem; padding-top: 2.1rem; position: relative; }
+.fleet-eyebrow { align-items: center; color: #ff8a1a; display: flex; font-size: .8rem; font-weight: 800; gap: .5rem; letter-spacing: .05em; margin: 0 0 .35rem; text-transform: uppercase; }
+.fleet-eyebrow span { background: #ff8a1a; display: block; height: 2px; width: 27px; }
+.fleet-hero h1 { font-size: clamp(3.5rem, 7vw, 5rem); letter-spacing: -.06em; line-height: .9; margin: 0 0 .6rem; text-transform: uppercase; }
+.fleet-hero-content > p:not(.fleet-eyebrow) { font-size: 1.05rem; font-weight: 700; margin: 0 0 .35rem; }
+.fleet-hero-content small { color: #e1ecf4; display: block; font-size: .74rem; line-height: 1.45; }
+.fleet-highlights { align-items: center; bottom: 1.1rem; display: flex; gap: 0; justify-content: flex-end; left: 50%; position: absolute; right: 2rem; }
+.fleet-highlights span { align-items: center; border-left: 1px solid rgba(255,255,255,.28); color: #e5eef4; display: flex; font-size: .58rem; gap: .45rem; line-height: 1.2; padding: 0 .8rem; }
+.fleet-highlights b { color: #fff; font-size: 1.35rem; font-weight: 400; }
+.fleet-catalog { background: #f7f9fb; padding: .9rem 0 4rem; scroll-margin-top: 80px; }
+.fleet-tabs { background: #dfe9f1; border-radius: 1.5rem; display: flex; margin-bottom: .7rem; max-width: 232px; overflow: hidden; }
+.fleet-tab { background: transparent; border: 0; border-radius: 1.5rem; color: #153e62; cursor: pointer; flex: 1; font: inherit; font-size: .82rem; font-weight: 800; padding: .42rem 1.1rem; }
+.fleet-tab.active { background: #0a3d68; color: #fff; }
+.fleet-grid { display: grid; gap: .9rem; grid-template-columns: repeat(1, 1fr); }
+.fleet-card { background: #fff; border-radius: .35rem; box-shadow: 0 2px 8px rgba(15, 48, 78, .12); overflow: hidden; }
+.fleet-card > img { aspect-ratio: 1.7 / 1; display: block; object-fit: cover; width: 100%; }
+.fleet-card-body { padding: .65rem .75rem .7rem; }
+.fleet-card-body h2 { color: #093b67; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 800; letter-spacing: 0; line-height: 1.1; margin: 0 0 .55rem; }
+.fleet-seats { color: #365773; display: block; font-size: .61rem; margin-bottom: .65rem; }
+.fleet-price { color: #ff8a1a; display: block; font-size: .78rem; margin-bottom: .65rem; }
+.fleet-card-features { border-top: 1px solid #e0e8ee; display: flex; gap: .45rem; padding-top: .55rem; }
+.fleet-card-features span { color: #34546e; font-size: .53rem; white-space: nowrap; }
+.fleet-card-body > a, .fleet-promo a { background: #ff8a1a; border-radius: 1rem; color: #fff; display: inline-flex; font-size: .6rem; font-weight: 800; gap: .5rem; margin-top: .7rem; padding: .42rem .72rem; text-decoration: none; }
+.fleet-card-body > a span, .fleet-promo a span { font-size: .9rem; line-height: .6; }
+.fleet-promo { align-items: center; background: linear-gradient(115deg, rgba(3, 39, 74, .96), rgba(8, 67, 104, .6)), url('/images/cabs/Toyota Innova Crysta-01.jpeg') center / cover; border-radius: .35rem; color: #fff; display: flex; min-height: 250px; overflow: hidden; padding: 1.5rem; position: relative; }
+.fleet-promo strong { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; line-height: .95; }
+.fleet-promo em { color: #fff; font-style: italic; }
+.fleet-promo p { color: #e1edf5; font-size: .65rem; line-height: 1.5; margin: 1.1rem 0 0; }
+.fleet-promo a { margin-top: .8rem; }
+.fleet-extra { background: #fff; padding: 3.5rem 0; scroll-margin-top: 80px; }
+.fleet-extra-alt { background: #f7f9fb; }
+.fleet-extra-heading { margin-bottom: 1.2rem; }
+.fleet-extra-heading .fleet-eyebrow { margin-bottom: .5rem; }
+.fleet-extra-heading h2 { color: #093b67; font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0; }
+.fleet-extra-grid { display: grid; gap: .9rem; grid-template-columns: repeat(1, 1fr); }
+@media (min-width: 700px) { .fleet-grid { grid-template-columns: repeat(3, 1fr); } .fleet-promo { grid-column: span 2; } }
+@media (min-width: 700px) { .fleet-extra-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .fleet-hero-content { padding-left: 2rem; padding-right: 2rem; } .fleet-grid { grid-template-columns: repeat(5, 1fr); } .fleet-promo { grid-column: span 3; min-height: 250px; } .fleet-extra-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 699px) { .fleet-highlights { bottom: .8rem; justify-content: flex-start; left: 1.25rem; overflow: auto; right: 0; } .fleet-highlights span { min-width: 110px; } .fleet-hero-content { padding-bottom: 5.4rem; } }
