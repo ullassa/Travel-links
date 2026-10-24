@@ -1,41 +1,77 @@
-.fleet-hero { background: #062e54; color: #fff; min-height: 285px; overflow: hidden; position: relative; }
-.fleet-hero-image { background: linear-gradient(90deg, rgba(3, 35, 65, .98) 0%, rgba(3, 35, 65, .82) 38%, rgba(3, 35, 65, .2) 100%), url('/images/cabs/Toyota Innova Hycross-01.jpeg') center 58% / cover; inset: 0; position: absolute; }
-.fleet-hero-content { min-height: 285px; padding-bottom: 3.7rem; padding-top: 2.1rem; position: relative; }
-.fleet-eyebrow { align-items: center; color: #ff8a1a; display: flex; font-size: .8rem; font-weight: 800; gap: .5rem; letter-spacing: .05em; margin: 0 0 .35rem; text-transform: uppercase; }
-.fleet-eyebrow span { background: #ff8a1a; display: block; height: 2px; width: 27px; }
-.fleet-hero h1 { font-size: clamp(3.5rem, 7vw, 5rem); letter-spacing: -.06em; line-height: .9; margin: 0 0 .6rem; text-transform: uppercase; }
-.fleet-hero-content > p:not(.fleet-eyebrow) { font-size: 1.05rem; font-weight: 700; margin: 0 0 .35rem; }
-.fleet-hero-content small { color: #e1ecf4; display: block; font-size: .74rem; line-height: 1.45; }
-.fleet-highlights { align-items: center; bottom: 1.1rem; display: flex; gap: 0; justify-content: flex-end; left: 50%; position: absolute; right: 2rem; }
-.fleet-highlights span { align-items: center; border-left: 1px solid rgba(255,255,255,.28); color: #e5eef4; display: flex; font-size: .58rem; gap: .45rem; line-height: 1.2; padding: 0 .8rem; }
-.fleet-highlights b { color: #fff; font-size: 1.35rem; font-weight: 400; }
-.fleet-catalog { background: #f7f9fb; padding: .9rem 0 4rem; scroll-margin-top: 80px; }
-.fleet-tabs { background: #dfe9f1; border-radius: 1.5rem; display: flex; margin-bottom: .7rem; max-width: 232px; overflow: hidden; }
-.fleet-tab { background: transparent; border: 0; border-radius: 1.5rem; color: #153e62; cursor: pointer; flex: 1; font: inherit; font-size: .82rem; font-weight: 800; padding: .42rem 1.1rem; }
-.fleet-tab.active { background: #0a3d68; color: #fff; }
+.premium-hero { background: #f4f0e8; color: #171a20; min-height: min(760px, calc(100vh - 78px)); overflow: hidden; position: relative; }
+.premium-hero-image { align-items: center; background: linear-gradient(145deg, #d9cbb8, #fffdf8 62%); border-radius: 2px; box-shadow: 0 28px 70px rgba(24,37,52,.18); display: flex; flex-direction: column; justify-content: center; padding: 2rem; position: absolute; right: clamp(2rem, 8vw, 9rem); top: 10%; width: min(39vw, 560px); z-index: 0; }
+.premium-hero-image::after { background: linear-gradient(180deg, rgba(23,27,37,.05), rgba(23,27,37,.18)), url('/images/corporate/c1.jpeg') center / cover; border-radius: 1px; content: ''; height: 54%; left: 0; opacity: .98; position: absolute; right: 0; top: 0; }
+.premium-hero-image img { height: auto; margin-top: 13rem; max-width: 88%; position: relative; width: 360px; z-index: 1; }
+.premium-hero-image span { color: #542d38; font-size: .68rem; font-weight: 800; letter-spacing: .12em; margin-top: .8rem; position: relative; text-transform: uppercase; z-index: 1; }
+.premium-hero-content { min-height: min(760px, calc(100vh - 78px)); padding-bottom: 8rem; padding-top: clamp(7rem, 17vh, 11rem); position: relative; z-index: 1; }
+.premium-hero-copy { max-width: 680px; }
+.premium-eyebrow { align-items: center; color: #542d38; display: flex; font-size: .68rem; font-weight: 800; gap: .65rem; letter-spacing: .18em; margin: 0 0 1.4rem; text-transform: uppercase; }
+.premium-eyebrow span { background: #c7a46a; display: block; height: 2px; width: 34px; }
+.premium-hero h1 { font-size: clamp(3.5rem, 8vw, 7.4rem); letter-spacing: -.07em; line-height: .93; margin: 0 0 1.6rem; }
+.premium-hero h1 em { color: #542d38; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; }
+.premium-lead { color: #68707d; font-size: clamp(.95rem, 1.4vw, 1.15rem); line-height: 1.7; max-width: 440px; }
+.premium-hero .hero-actions { margin-top: 2.1rem; }
+.premium-hero .button { border-radius: 0; }
+.premium-hero .button-primary { background: #182534; color: #fff; }
+.premium-hero .button-ghost { border-color: rgba(24,37,52,.3); color: #182534; }
+.premium-hero-note { align-items: center; bottom: 5.2rem; color: #68707d; display: flex; font-size: .68rem; gap: .6rem; letter-spacing: .08em; position: absolute; text-transform: uppercase; }
+.premium-hero-note strong { color: #202b3d; }
+.note-mark { color: #c7a46a; font-size: 1.15rem; }
+.premium-trust { align-items: center; background: #182534; bottom: 0; display: flex; gap: 0; justify-content: space-between; left: 0; max-width: none; padding-bottom: 1.35rem; padding-top: 1.35rem; position: absolute; right: 0; z-index: 1; }
+.premium-trust span { border-left: 1px solid rgba(255,255,255,.22); color: #d6e3ef; flex: 1; font-size: .68rem; letter-spacing: .05em; padding-left: 1.5rem; }
+.premium-trust span:first-child { border-left: 0; }
+.premium-trust b { color: #c7a46a; font-size: .6rem; margin-right: .7rem; }
+.fleet-catalog { background: #f8f5ef; padding: 3rem 0 4rem; scroll-margin-top: 80px; }
+.fleet-tabs { background: #e7dfd2; border-radius: 1.5rem; display: flex; margin-bottom: .7rem; max-width: 232px; overflow: hidden; }
+.fleet-tab { background: transparent; border: 0; border-radius: 1.5rem; color: #542d38; cursor: pointer; flex: 1; font: inherit; font-size: .82rem; font-weight: 800; padding: .42rem 1.1rem; }
+.fleet-tab.active { background: #542d38; color: #fff; }
 .fleet-grid { display: grid; gap: .9rem; grid-template-columns: repeat(1, 1fr); }
-.fleet-card { background: #fff; border-radius: .35rem; box-shadow: 0 2px 8px rgba(15, 48, 78, .12); overflow: hidden; }
+.fleet-card { background: #fffdf9; border-radius: .35rem; box-shadow: 0 12px 28px rgba(24,37,52,.08); overflow: hidden; }
 .fleet-card > img { aspect-ratio: 1.7 / 1; display: block; object-fit: cover; width: 100%; }
 .fleet-card-body { padding: .65rem .75rem .7rem; }
-.fleet-card-body h2 { color: #093b67; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 800; letter-spacing: 0; line-height: 1.1; margin: 0 0 .55rem; }
+.fleet-card-body h2 { color: #182534; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 800; letter-spacing: 0; line-height: 1.1; margin: 0 0 .55rem; }
 .fleet-seats { color: #365773; display: block; font-size: .61rem; margin-bottom: .65rem; }
-.fleet-price { color: #ff8a1a; display: block; font-size: .78rem; margin-bottom: .65rem; }
+.fleet-price { color: #9a6840; display: block; font-size: .78rem; margin-bottom: .65rem; }
 .fleet-card-features { border-top: 1px solid #e0e8ee; display: flex; gap: .45rem; padding-top: .55rem; }
 .fleet-card-features span { color: #34546e; font-size: .53rem; white-space: nowrap; }
-.fleet-card-body > a, .fleet-promo a { background: #ff8a1a; border-radius: 1rem; color: #fff; display: inline-flex; font-size: .6rem; font-weight: 800; gap: .5rem; margin-top: .7rem; padding: .42rem .72rem; text-decoration: none; }
+.fleet-card-body > a, .fleet-promo a { background: #c7a46a; border-radius: 1rem; color: #171a20; display: inline-flex; font-size: .6rem; font-weight: 800; gap: .5rem; margin-top: .7rem; padding: .42rem .72rem; text-decoration: none; }
 .fleet-card-body > a span, .fleet-promo a span { font-size: .9rem; line-height: .6; }
 .fleet-promo { align-items: center; background: linear-gradient(115deg, rgba(3, 39, 74, .96), rgba(8, 67, 104, .6)), url('/images/cabs/Toyota Innova Crysta-01.jpeg') center / cover; border-radius: .35rem; color: #fff; display: flex; min-height: 250px; overflow: hidden; padding: 1.5rem; position: relative; }
 .fleet-promo strong { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; line-height: .95; }
 .fleet-promo em { color: #fff; font-style: italic; }
 .fleet-promo p { color: #e1edf5; font-size: .65rem; line-height: 1.5; margin: 1.1rem 0 0; }
 .fleet-promo a { margin-top: .8rem; }
-.fleet-extra { background: #fff; padding: 3.5rem 0; scroll-margin-top: 80px; }
-.fleet-extra-alt { background: #f7f9fb; }
+.fleet-extra { background: #fffdf9; padding: 3.5rem 0; scroll-margin-top: 80px; }
+.fleet-extra-alt { background: #f1ece4; }
 .fleet-extra-heading { margin-bottom: 1.2rem; }
 .fleet-extra-heading .fleet-eyebrow { margin-bottom: .5rem; }
-.fleet-extra-heading h2 { color: #093b67; font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0; }
+.fleet-extra-heading h2 { color: #182534; font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0; }
 .fleet-extra-grid { display: grid; gap: .9rem; grid-template-columns: repeat(1, 1fr); }
-@media (min-width: 700px) { .fleet-grid { grid-template-columns: repeat(3, 1fr); } .fleet-promo { grid-column: span 2; } }
+@media (min-width: 700px) { .fleet-grid { grid-template-columns: repeat(4, 1fr); } .fleet-promo { grid-column: span 2; } }
 @media (min-width: 700px) { .fleet-extra-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1100px) { .fleet-hero-content { padding-left: 2rem; padding-right: 2rem; } .fleet-grid { grid-template-columns: repeat(5, 1fr); } .fleet-promo { grid-column: span 3; min-height: 250px; } .fleet-extra-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 699px) { .fleet-highlights { bottom: .8rem; justify-content: flex-start; left: 1.25rem; overflow: auto; right: 0; } .fleet-highlights span { min-width: 110px; } .fleet-hero-content { padding-bottom: 5.4rem; } }
+@media (min-width: 1100px) { .premium-hero-content { padding-left: 2rem; padding-right: 2rem; } .fleet-promo { min-height: 250px; } .fleet-extra-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 699px) { .premium-hero { min-height: 760px; } .premium-hero-content { min-height: 760px; padding-bottom: 12rem; padding-top: 5rem; } .premium-hero-image { bottom: 7rem; left: 1.25rem; padding: 1rem; right: 1.25rem; top: auto; width: auto; } .premium-hero-image::after { height: 38%; } .premium-hero-image img { margin-top: 8rem; max-width: 80%; } .premium-hero-note { bottom: 9rem; left: 1.25rem; } .premium-trust { align-items: flex-start; display: grid; gap: .7rem; padding: 1rem 1.25rem; } .premium-trust span { border-left: 0; padding-left: 0; } }
+
+/* Replace pale catalog surfaces with a richer hospitality palette. */
+.premium-hero { background: #211326; color: #fff5f1; }
+.premium-hero-image { background: linear-gradient(145deg, #572d3e, #27172c 62%); box-shadow: 0 28px 70px rgba(17,7,22,.5); }
+.premium-hero-image span, .premium-eyebrow, .premium-hero h1 em { color: #e58da8; }
+.premium-lead, .premium-hero-note { color: #d8c3cb; }
+.premium-hero .button-primary { background: #e58da8; color: #27131f; }
+.premium-hero .button-ghost { border-color: rgba(229,141,168,.55); color: #fff5f1; }
+.premium-trust { background: #120b18; }
+.fleet-catalog { background: #4a3032; }
+.fleet-tabs { background: #633d45; }
+.fleet-tab { color: #f7c4d1; }
+.fleet-tab.active { background: #e58da8; color: #2b1d25; }
+.fleet-card { background: #fff5f1; box-shadow: 0 12px 28px rgba(42,24,32,.24); }
+.fleet-card:nth-child(2n) { background: #f2d4dc; }
+.fleet-card:nth-child(3n) { background: #e8c7b5; }
+.fleet-card-body h2 { color: #2b1d25; }
+.fleet-seats, .fleet-card-features span { color: #6b5560; }
+.fleet-price { color: #b85f78; }
+.fleet-card-features { border-color: rgba(43,29,37,.16); }
+.fleet-extra { background: #2b1d25; }
+.fleet-extra-alt { background: #4b3038; }
+.fleet-extra-heading h2 { color: #fff5f1; }
+.fleet-promo { background: linear-gradient(115deg, rgba(41,28,53,.94), rgba(106,53,62,.76)), url('/images/cabs/Toyota Innova Crysta-01.jpeg') center / cover; }

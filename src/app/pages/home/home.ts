@@ -62,6 +62,14 @@ export class Home {
       description: 'A trusted, comfortable MPV for families and extended road trips.',
     },
     {
+      name: 'Toyota Innova Crysta Executive',
+      seats: '6 + 1 seats',
+      image: '/images/cabs/Toyota Innova Crysta-01.jpeg',
+      price: 3800,
+      isAc: true,
+      description: 'An executive-ready MPV for airport transfers and corporate travel.',
+    },
+    {
       name: 'Toyota Innova Hycross',
       seats: '6 + 1 seats',
       image: '/images/cabs/Toyota Innova Hycross-01.jpeg',
@@ -92,6 +100,14 @@ export class Home {
       price: 5000,
       isAc: false,
       description: 'A premium people mover with generous space for larger groups.',
+    },
+    {
+      name: 'Kia Carnival Executive',
+      seats: '7 + 1 seats',
+      image: '/images/cabs/Kia Carnival-01.jpeg',
+      price: 5400,
+      isAc: false,
+      description: 'A spacious executive people mover for polished group travel.',
     },
   ];
 
