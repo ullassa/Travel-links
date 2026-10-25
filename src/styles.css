@@ -2,6 +2,7 @@
 
 :root { --ink: #171a20; --muted: #716f6a; --cream: #f5f1e9; --gold: #c7a46a; --line: #ddd7cc; --navy: #82d18d; --wine: #542d38; }
 * { box-sizing: border-box; }
+html, body { max-width: 100%; overflow-x: hidden; }
 html { scroll-behavior: smooth; }
 body { background: var(--cream); color: var(--ink); font-family: 'DM Sans', sans-serif; margin: 0; }
 h1, h2, h3, p { margin-top: 0; }
@@ -143,18 +144,22 @@ body { background: #3b2729; color: var(--ink); }
 @media (min-width: 1100px) { .container { padding-left: 2rem; padding-right: 2rem; } .hero-content { padding-top: 10rem; } .service-grid { grid-template-columns: repeat(4, 1fr); } .vehicle-card img { height: 270px; } }
 @media (max-width: 699px) {
   .desktop-only { display: none; }
+  .container { margin-left: 0; margin-right: 0; max-width: none; width: 100%; }
+  .section { width: 100%; }
+  .section-heading { align-items: flex-start; display: block; }
+  .section-heading > div { width: 100%; }
+  .section-heading h2 { font-size: clamp(2.35rem, 11vw, 3.2rem); }
   .review-section { padding-bottom: 3.5rem; padding-top: 3.5rem; }
-  .review-section .section-heading { display: block; margin-bottom: 1.5rem; }
-  .review-section h2 { font-size: clamp(2.35rem, 11vw, 3.2rem); }
+  .review-section .section-heading { margin-bottom: 1.5rem; }
   .review-grid { gap: 1rem; grid-template-columns: 1fr; }
   .review-grid article { min-height: 0; padding: 1.25rem; }
   .review-grid blockquote { font-size: 1.15rem; margin: 1rem 0 1.5rem; }
   .partner-band { padding: 3.5rem 0; }
-  .partner-content { display: block; }
+  .partner-content { display: block; width: 100%; }
   .partner-content > div + div { margin-top: 1.5rem; }
   .partner-content h2 { font-size: clamp(2.35rem, 11vw, 3.2rem); }
   .contact-section { padding-bottom: 3.5rem; padding-top: 3.5rem; }
-  .contact-grid { display: block; }
+  .contact-grid { display: block; width: 100%; }
   .contact-grid > div + div { margin-top: 2rem; }
   .contact-details { width: 100%; }
 }
