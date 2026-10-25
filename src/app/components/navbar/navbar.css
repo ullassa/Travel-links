@@ -1,9 +1,10 @@
 
 .site-header { background: rgba(18,10,16,.99); border-bottom: 1px solid rgba(229,141,168,.32); position: sticky; top: 0; z-index: 10; }
 .nav-shell { align-items: center; display: flex; justify-content: space-between; margin: auto; max-width: 1240px; min-height: 78px; padding: 0 1.25rem; }
-.brand { align-items: center; color: #fff; display: flex; gap: .65rem; line-height: 1; text-decoration: none; }
+.brand { align-items: center; color: #fff5f1; display: flex; gap: .65rem; line-height: 1; text-decoration: none; }
 .brand-logo { display: block; height: 42px; object-fit: contain; width: 42px; }
-.brand strong { font-weight: 800; }
+.brand > span { color: #f7dce3; font-size: 1rem; font-weight: 700; }
+.brand strong { color: #f1a1b7; font-weight: 800; }
 .brand small { color: #c8c0b4; display: block; font-size: .56rem; letter-spacing: .08em; margin-top: .3rem; text-transform: uppercase; }
 .menu { align-items: center; display: none; gap: 1.25rem; }
 .menu a, .phone-link { color: #edf5fa; font-size: .75rem; text-decoration: none; }
@@ -30,3 +31,12 @@
   .menu-toggle { flex-shrink: 0; }
   .menu.menu-open { max-height: calc(100vh - 78px); overflow-y: auto; }
 }
+
+.site-header { background: rgba(28,16,30,.94); border-bottom-color: rgba(197,164,109,.24); }
+.brand > span { color: #fffdf9; }
+.brand strong { color: #d98da7; }
+.brand small { color: #afa3ad; }
+.menu a, .phone-link { color: #eee5e7; }
+.menu a:hover, .menu a.active { color: #d98da7; }
+.menu a::after { background: #c5a46d; }
+.button-whatsapp { background: #c5a46d; color: #241c24 !important; }

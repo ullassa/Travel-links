@@ -51,7 +51,7 @@
     <div class="fleet-grid">
       @for (vehicle of filteredCabs(); track vehicle.name) {
         <article class="fleet-card">
-          <img [src]="vehicle.image" [alt]="vehicle.name" />
+          <img [src]="vehicle.image" [alt]="vehicle.name" loading="lazy" decoding="async" />
           <div class="fleet-card-body">
             <h2>{{ vehicle.name }}</h2>
             <span class="fleet-seats">♟ &nbsp; {{ vehicle.seats.replace(' + 1', '') }} Seater ({{ vehicle.seats.includes('4') ? 'Sedan' : 'MPV' }})</span>
@@ -89,7 +89,7 @@
     <div class="fleet-extra-grid">
       @for (vehicle of filteredTempoTravellers(); track vehicle.name) {
         <article class="fleet-card">
-          <img [src]="vehicle.image" [alt]="vehicle.name" />
+          <img [src]="vehicle.image" [alt]="vehicle.name" loading="lazy" decoding="async" />
           <div class="fleet-card-body">
             <h2>{{ vehicle.name }}</h2>
             <span class="fleet-seats">♟ &nbsp; {{ vehicle.seats.replace(' + 1', '') }} Seater</span>
@@ -120,7 +120,7 @@
     <div class="fleet-extra-grid">
       @for (vehicle of filteredBuses(); track vehicle.name) {
         <article class="fleet-card">
-          <img [src]="vehicle.image" [alt]="vehicle.name" />
+          <img [src]="vehicle.image" [alt]="vehicle.name" loading="lazy" decoding="async" />
           <div class="fleet-card-body">
             <h2>{{ vehicle.name }}</h2>
             <span class="fleet-seats">♟ &nbsp; {{ vehicle.seats.replace(' + 1', '') }} Seater</span>
@@ -157,7 +157,7 @@
     <div class="tour-grid">
       @for (tour of tours; track tour.destination) {
         <article class="tour-card">
-          <img [src]="tour.image" [alt]="tour.destination" />
+          <img [src]="tour.image" [alt]="tour.destination" loading="lazy" decoding="async" />
           <div class="tour-overlay">
             <span>{{ tour.time }}</span>
             <h3>{{ tour.destination }}</h3>

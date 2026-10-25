@@ -1,24 +1,25 @@
 .premium-hero { background: #f4f0e8; color: #171a20; min-height: min(760px, calc(100vh - 78px)); overflow: hidden; position: relative; }
 .premium-hero-image { background: linear-gradient(145deg, #572d3e, #27172c 62%); border: 1px solid rgba(241,161,183,.2); border-radius: .35rem; box-shadow: 0 28px 70px rgba(17,7,22,.5); display: flex; flex-direction: column; justify-content: flex-end; min-height: 510px; overflow: hidden; padding: 1.5rem; position: absolute; right: clamp(2rem, 8vw, 9rem); top: 10%; width: min(39vw, 560px); z-index: 0; }
-.premium-hero-image::after { background: linear-gradient(180deg, rgba(23,27,37,.05), rgba(23,27,37,.18)), url('/images/corporate/c1.jpeg') center / cover; border-radius: 1px; content: ''; height: 54%; left: 0; opacity: .98; position: absolute; right: 0; top: 0; }
+.premium-hero-image::after { background: linear-gradient(180deg, rgba(23,27,37,.02), rgba(23,27,37,.24)), url('/images/corporate/c1.jpeg') center / cover; border-radius: 1px; content: ''; height: 54%; left: 0; opacity: .98; position: absolute; right: 0; top: 0; }
 .premium-hero-image-frame { border: 1px solid rgba(255,245,241,.2); inset: .8rem; position: absolute; }
 .premium-hero-image-caption { color: #fff5f1; position: relative; z-index: 1; }
-.premium-hero-image-caption span { color: #f1a1b7; display: block; font-family: 'Playfair Display', serif; font-size: 1.8rem; font-style: italic; }
-.premium-hero-image-caption small { color: #ead4da; display: block; font-size: .62rem; letter-spacing: .12em; margin-top: .4rem; text-transform: uppercase; }
+.premium-hero-image-caption span { color: #d98da7; display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-style: italic; }
+.premium-hero-image-caption small { color: #ffb0b6; display: block; font-size: .62rem; letter-spacing: .12em; margin-top: .4rem; text-transform: uppercase; }
 .premium-hero-content { min-height: min(760px, calc(100vh - 78px)); padding-bottom: 8rem; padding-top: clamp(7rem, 17vh, 11rem); position: relative; z-index: 1; }
 .premium-hero-copy { max-width: 680px; }
 .premium-eyebrow { align-items: center; color: #542d38; display: flex; font-size: .68rem; font-weight: 800; gap: .65rem; letter-spacing: .18em; margin: 0 0 1.4rem; text-transform: uppercase; }
 .premium-eyebrow span { background: #c7a46a; display: block; height: 2px; width: 34px; }
 .premium-hero h1 { font-size: clamp(3.5rem, 8vw, 7.4rem); letter-spacing: -.07em; line-height: .93; margin: 0 0 1.6rem; }
-.premium-hero h1 em { color: #542d38; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; }
+.premium-hero h1 em { color: #542d38; display: inline-block; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; }
 .premium-lead { color: #68707d; font-size: clamp(.95rem, 1.4vw, 1.15rem); line-height: 1.7; max-width: 440px; }
 .premium-hero .hero-actions { margin-top: 2.1rem; }
 .premium-hero .button { border-radius: 0; }
 .premium-hero .button-primary { background: #182534; color: #fff; }
 .premium-hero .button-ghost { border-color: rgba(24,37,52,.3); color: #182534; }
 .premium-hero-note { align-items: center; bottom: 5.2rem; color: #68707d; display: flex; font-size: .68rem; gap: .6rem; letter-spacing: .08em; position: absolute; text-transform: uppercase; }
-.premium-hero-note strong { color: #202b3d; }
-.note-mark { color: #c7a46a; font-size: 1.15rem; }
+.premium-hero-note strong { color: #7f1d2d; }
+.premium-hero-note > span:not(.note-mark) { color: #8f4652; }
+.note-mark { color: #7f1d2d; font-size: 1.15rem; }
 .premium-trust { align-items: center; background: #182534; bottom: 0; display: flex; gap: 0; justify-content: space-between; left: 0; max-width: none; padding-bottom: 1.35rem; padding-top: 1.35rem; position: absolute; right: 0; z-index: 1; }
 .premium-trust span { border-left: 1px solid rgba(255,255,255,.22); color: #d6e3ef; flex: 1; font-size: .68rem; letter-spacing: .05em; padding-left: 1.5rem; }
 .premium-trust span:first-child { border-left: 0; }
@@ -29,9 +30,9 @@
 .fleet-tab.active { background: #542d38; color: #fff; }
 .fleet-grid { display: grid; gap: .9rem; grid-template-columns: repeat(1, 1fr); }
 .fleet-card { background: #fffdf9; border-radius: .35rem; box-shadow: 0 12px 28px rgba(24,37,52,.08); overflow: hidden; }
-.fleet-card > img { aspect-ratio: 1.7 / 1; display: block; object-fit: cover; width: 100%; }
+.fleet-card > img { aspect-ratio: 1.7 / 1; display: block; filter: saturate(1.06) contrast(1.03); image-rendering: auto; object-fit: cover; object-position: center; width: 100%; }
 .fleet-card-body { padding: .65rem .75rem .7rem; }
-.fleet-card-body h2 { color: #182534; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 800; letter-spacing: 0; line-height: 1.1; margin: 0 0 .55rem; }
+.fleet-card-body h2 { color: #182534; font-family: 'Manrope', sans-serif; font-size: 1rem; font-weight: 800; letter-spacing: 0; line-height: 1.1; margin: 0 0 .55rem; }
 .fleet-seats { color: #365773; display: block; font-size: .61rem; margin-bottom: .65rem; }
 .fleet-price { color: #9a6840; display: block; font-size: .78rem; margin-bottom: .65rem; }
 .fleet-card-features { border-top: 1px solid #e0e8ee; display: flex; gap: .45rem; padding-top: .55rem; }
@@ -39,7 +40,7 @@
 .fleet-card-body > a, .fleet-promo a { background: #c7a46a; border-radius: 1rem; color: #171a20; display: inline-flex; font-size: .6rem; font-weight: 800; gap: .5rem; margin-top: .7rem; padding: .42rem .72rem; text-decoration: none; }
 .fleet-card-body > a span, .fleet-promo a span { font-size: .9rem; line-height: .6; }
 .fleet-promo { align-items: center; background: linear-gradient(115deg, rgba(3, 39, 74, .96), rgba(8, 67, 104, .6)), url('/images/cabs/Toyota Innova Crysta-01.jpeg') center / cover; border-radius: .35rem; color: #fff; display: flex; min-height: 250px; overflow: hidden; padding: 1.5rem; position: relative; }
-.fleet-promo strong { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 500; line-height: .95; }
+.fleet-promo strong { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 600; line-height: .95; }
 .fleet-promo em { color: #fff; font-style: italic; }
 .fleet-promo p { color: #e1edf5; font-size: .65rem; line-height: 1.5; margin: 1.1rem 0 0; }
 .fleet-promo a { margin-top: .8rem; }
@@ -135,6 +136,7 @@
     grid-template-columns: 1fr;
   }
 }
+
 
 /* Replace pale catalog surfaces with a richer hospitality palette. */
 .premium-hero { background: #211326; color: #fff5f1; }

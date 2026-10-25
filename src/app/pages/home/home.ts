@@ -115,7 +115,7 @@ export class Home {
     {
       name: 'Force Urbania',
       seats: '12 + 1 seats',
-      image: '/images/tempo traveller/Force Urbania-01.jpeg',
+      image: '/images/tempo traveller/tempo 2.jpeg',
       price: 5000,
       isAc: true,
       description: 'Roomy, air-conditioned travel for families and small groups.',
@@ -123,7 +123,7 @@ export class Home {
     {
       name: 'Force Traveller',
       seats: '9 + 1 seats',
-      image: '/images/tempo traveller/Force Traveller-01.jpeg',
+      image: '/images/tempo traveller/temppo1.jpeg',
       price: 5000,
       isAc: false,
       description: 'Roomy, air-conditioned travel for families and small groups.',
@@ -131,7 +131,7 @@ export class Home {
     {
       name: 'Force Urbania Non AC',
       seats: '12 + 1 seats',
-      image: '/images/tempo traveller/Force Urbania-01.jpeg',
+      image: '/images/tempo traveller/tempo 2.jpeg',
       price: 4500,
       isAc: false,
       description: 'Spacious group travel for family trips and local journeys.',
@@ -139,7 +139,7 @@ export class Home {
     {
       name: 'Force Traveller AC',
       seats: '9 + 1 seats',
-      image: '/images/tempo traveller/Force Traveller-01.jpeg',
+      image: '/images/tempo traveller/temppo1.jpeg',
       price: 5500,
       isAc: true,
       description: 'Comfortable, air-conditioned travel for small groups.',
