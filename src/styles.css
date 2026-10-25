@@ -141,4 +141,20 @@ body { background: #3b2729; color: var(--ink); }
 .contact-details strong { color: #fff5f1; }
 @media (min-width: 700px) { .container { padding-left: 2rem; padding-right: 2rem; } .section { padding: 7rem 0; } .intro-grid, .contact-grid, .why-grid, .partner-content { grid-template-columns: 1fr 1fr; gap: 5rem; } .service-grid { grid-template-columns: repeat(2, 1fr); } .vehicle-grid, .tour-grid, .review-grid { grid-template-columns: repeat(3, 1fr); } .review-grid { grid-template-columns: repeat(2, 1fr); } .split-section { grid-template-columns: 1fr 1fr; } .split-image { min-height: 560px; } .split-copy { align-items: start; display: flex; flex-direction: column; justify-content: center; padding: 5rem; } }
 @media (min-width: 1100px) { .container { padding-left: 2rem; padding-right: 2rem; } .hero-content { padding-top: 10rem; } .service-grid { grid-template-columns: repeat(4, 1fr); } .vehicle-card img { height: 270px; } }
-@media (max-width: 699px) { .desktop-only { display: none; } }
+@media (max-width: 699px) {
+  .desktop-only { display: none; }
+  .review-section { padding-bottom: 3.5rem; padding-top: 3.5rem; }
+  .review-section .section-heading { display: block; margin-bottom: 1.5rem; }
+  .review-section h2 { font-size: clamp(2.35rem, 11vw, 3.2rem); }
+  .review-grid { gap: 1rem; grid-template-columns: 1fr; }
+  .review-grid article { min-height: 0; padding: 1.25rem; }
+  .review-grid blockquote { font-size: 1.15rem; margin: 1rem 0 1.5rem; }
+  .partner-band { padding: 3.5rem 0; }
+  .partner-content { display: block; }
+  .partner-content > div + div { margin-top: 1.5rem; }
+  .partner-content h2 { font-size: clamp(2.35rem, 11vw, 3.2rem); }
+  .contact-section { padding-bottom: 3.5rem; padding-top: 3.5rem; }
+  .contact-grid { display: block; }
+  .contact-grid > div + div { margin-top: 2rem; }
+  .contact-details { width: 100%; }
+}
