@@ -1,8 +1,10 @@
 .premium-hero { background: #f4f0e8; color: #171a20; min-height: min(760px, calc(100vh - 78px)); overflow: hidden; position: relative; }
-.premium-hero-image { align-items: center; background: linear-gradient(145deg, #d9cbb8, #fffdf8 62%); border-radius: 2px; box-shadow: 0 28px 70px rgba(24,37,52,.18); display: flex; flex-direction: column; justify-content: center; padding: 2rem; position: absolute; right: clamp(2rem, 8vw, 9rem); top: 10%; width: min(39vw, 560px); z-index: 0; }
+.premium-hero-image { background: linear-gradient(145deg, #572d3e, #27172c 62%); border: 1px solid rgba(241,161,183,.2); border-radius: .35rem; box-shadow: 0 28px 70px rgba(17,7,22,.5); display: flex; flex-direction: column; justify-content: flex-end; min-height: 510px; overflow: hidden; padding: 1.5rem; position: absolute; right: clamp(2rem, 8vw, 9rem); top: 10%; width: min(39vw, 560px); z-index: 0; }
 .premium-hero-image::after { background: linear-gradient(180deg, rgba(23,27,37,.05), rgba(23,27,37,.18)), url('/images/corporate/c1.jpeg') center / cover; border-radius: 1px; content: ''; height: 54%; left: 0; opacity: .98; position: absolute; right: 0; top: 0; }
-.premium-hero-image img { height: auto; margin-top: 13rem; max-width: 88%; position: relative; width: 360px; z-index: 1; }
-.premium-hero-image span { color: #542d38; font-size: .68rem; font-weight: 800; letter-spacing: .12em; margin-top: .8rem; position: relative; text-transform: uppercase; z-index: 1; }
+.premium-hero-image-frame { border: 1px solid rgba(255,245,241,.2); inset: .8rem; position: absolute; }
+.premium-hero-image-caption { color: #fff5f1; position: relative; z-index: 1; }
+.premium-hero-image-caption span { color: #f1a1b7; display: block; font-family: 'Playfair Display', serif; font-size: 1.8rem; font-style: italic; }
+.premium-hero-image-caption small { color: #ead4da; display: block; font-size: .62rem; letter-spacing: .12em; margin-top: .4rem; text-transform: uppercase; }
 .premium-hero-content { min-height: min(760px, calc(100vh - 78px)); padding-bottom: 8rem; padding-top: clamp(7rem, 17vh, 11rem); position: relative; z-index: 1; }
 .premium-hero-copy { max-width: 680px; }
 .premium-eyebrow { align-items: center; color: #542d38; display: flex; font-size: .68rem; font-weight: 800; gap: .65rem; letter-spacing: .18em; margin: 0 0 1.4rem; text-transform: uppercase; }
@@ -50,28 +52,92 @@
 @media (min-width: 700px) { .fleet-grid { grid-template-columns: repeat(4, 1fr); } .fleet-promo { grid-column: span 2; } }
 @media (min-width: 700px) { .fleet-extra-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1100px) { .premium-hero-content { padding-left: 2rem; padding-right: 2rem; } .fleet-promo { min-height: 250px; } .fleet-extra-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 699px) {
-  .premium-hero { min-height: 760px; }
-  .premium-hero-content { min-height: 760px; padding-bottom: 12rem; padding-top: 4.25rem; }
-  .premium-hero h1 { font-size: clamp(2.8rem, 14vw, 4rem); letter-spacing: -.06em; line-height: .96; max-width: 100%; }
-  .premium-lead { font-size: .95rem; max-width: 22rem; }
-  .premium-hero .hero-actions { align-items: stretch; flex-direction: column; max-width: 18rem; }
-  .premium-hero .hero-actions .button { width: 100%; }
-  .premium-hero-image { bottom: 7rem; left: 1.25rem; padding: 1rem; right: 1.25rem; top: auto; width: auto; }
-  .premium-hero-image::after { height: 38%; }
-  .premium-hero-image img { margin-top: 8rem; max-width: 80%; }
-  .premium-hero-image span { font-size: .6rem; text-align: center; }
-  .premium-hero-note { bottom: 9rem; left: 1.25rem; }
-  .premium-trust { align-items: flex-start; display: grid; gap: .7rem; padding: 1rem 1.25rem; }
-  .premium-trust span { border-left: 0; line-height: 1.35; padding-left: 0; }
-  .fleet-card-features { flex-wrap: wrap; }
-  .fleet-card-features span { white-space: normal; }
-  .fleet-promo p { max-width: 19rem; }
+@media (max-width: 767px) {
+  .premium-hero {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: visible;
+  }
+  .premium-hero-content {
+    min-height: 0;
+    order: 1;
+    padding-bottom: 2.5rem;
+    padding-top: 3rem;
+  }
+  .premium-hero-copy {
+    max-width: none;
+  }
+  .premium-hero h1 {
+    font-size: clamp(2.75rem, 13vw, 4.5rem);
+    line-height: .95;
+    margin-bottom: 1.25rem;
+  }
+  .premium-eyebrow {
+    flex-wrap: wrap;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+  .premium-lead {
+    max-width: 34rem;
+  }
+  .premium-hero .hero-actions {
+    gap: .7rem;
+    margin-top: 1.5rem;
+    max-width: 100%;
+  }
+  .premium-hero .hero-actions .button {
+    min-height: 3rem;
+    width: fit-content;
+  }
+  .premium-hero-note {
+    bottom: auto;
+    left: auto;
+    margin-top: 2rem;
+    position: static;
+  }
+  .premium-hero-image {
+    align-self: stretch;
+    bottom: auto;
+    left: auto;
+    margin: 0 1.25rem 2rem;
+    min-height: 18rem;
+    order: 2;
+    padding: 1.25rem;
+    position: relative;
+    right: auto;
+    top: auto;
+    width: auto;
+  }
+  .premium-hero-image::after { height: 70%; }
+  .premium-hero-image-frame { inset: .65rem; }
+  .premium-hero-image-caption span { font-size: 1.5rem; }
+  .premium-hero-image-caption small { font-size: .52rem; line-height: 1.4; }
+  .premium-trust {
+    bottom: auto;
+    display: grid;
+    gap: .8rem;
+    left: auto;
+    max-width: none;
+    order: 3;
+    padding: 1.25rem;
+    position: static;
+    right: auto;
+    width: 100%;
+  }
+  .premium-trust span {
+    border-left: 0;
+    line-height: 1.35;
+    padding-left: 0;
+  }
+  .fleet-grid,
+  .fleet-extra-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Replace pale catalog surfaces with a richer hospitality palette. */
 .premium-hero { background: #211326; color: #fff5f1; }
-.premium-hero-image { background: linear-gradient(145deg, #572d3e, #27172c 62%); box-shadow: 0 28px 70px rgba(17,7,22,.5); }
 .premium-hero-image span, .premium-eyebrow, .premium-hero h1 em { color: #e58da8; }
 .premium-lead, .premium-hero-note { color: #d8c3cb; }
 .premium-hero .button-primary { background: #e58da8; color: #27131f; }

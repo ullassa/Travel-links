@@ -20,10 +20,13 @@
 .menu-toggle span { background: #fff; display: block; height: 2px; width: 25px; }
 .menu.menu-open { background: #160e20; display: flex; flex-direction: column; left: 0; padding: 1.25rem; position: absolute; right: 0; top: 78px; }
 @media (min-width: 1100px) { .menu { display: flex; flex: 1; justify-content: center; } .desktop-actions { display: flex; } .menu-toggle { display: none; } .nav-shell { padding: 0 2rem; } }
-@media (max-width: 699px) {
+@media (max-width: 767px) {
   .nav-shell { gap: .5rem; }
   .brand { flex: 1; min-width: 0; }
   .brand-logo { height: 36px; width: 36px; }
+  .brand > span { min-width: 0; white-space: nowrap; }
   .brand small { font-size: .48rem; letter-spacing: .06em; }
-  .nav-whatsapp { font-size: .6rem; padding: .65rem .7rem; }
+  .nav-whatsapp { flex-shrink: 0; font-size: .6rem; padding: .65rem .7rem; }
+  .menu-toggle { flex-shrink: 0; }
+  .menu.menu-open { max-height: calc(100vh - 78px); overflow-y: auto; }
 }
