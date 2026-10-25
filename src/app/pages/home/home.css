@@ -50,7 +50,24 @@
 @media (min-width: 700px) { .fleet-grid { grid-template-columns: repeat(4, 1fr); } .fleet-promo { grid-column: span 2; } }
 @media (min-width: 700px) { .fleet-extra-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1100px) { .premium-hero-content { padding-left: 2rem; padding-right: 2rem; } .fleet-promo { min-height: 250px; } .fleet-extra-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 699px) { .premium-hero { min-height: 760px; } .premium-hero-content { min-height: 760px; padding-bottom: 12rem; padding-top: 5rem; } .premium-hero-image { bottom: 7rem; left: 1.25rem; padding: 1rem; right: 1.25rem; top: auto; width: auto; } .premium-hero-image::after { height: 38%; } .premium-hero-image img { margin-top: 8rem; max-width: 80%; } .premium-hero-note { bottom: 9rem; left: 1.25rem; } .premium-trust { align-items: flex-start; display: grid; gap: .7rem; padding: 1rem 1.25rem; } .premium-trust span { border-left: 0; padding-left: 0; } }
+@media (max-width: 699px) {
+  .premium-hero { min-height: 760px; }
+  .premium-hero-content { min-height: 760px; padding-bottom: 12rem; padding-top: 4.25rem; }
+  .premium-hero h1 { font-size: clamp(2.8rem, 14vw, 4rem); letter-spacing: -.06em; line-height: .96; max-width: 100%; }
+  .premium-lead { font-size: .95rem; max-width: 22rem; }
+  .premium-hero .hero-actions { align-items: stretch; flex-direction: column; max-width: 18rem; }
+  .premium-hero .hero-actions .button { width: 100%; }
+  .premium-hero-image { bottom: 7rem; left: 1.25rem; padding: 1rem; right: 1.25rem; top: auto; width: auto; }
+  .premium-hero-image::after { height: 38%; }
+  .premium-hero-image img { margin-top: 8rem; max-width: 80%; }
+  .premium-hero-image span { font-size: .6rem; text-align: center; }
+  .premium-hero-note { bottom: 9rem; left: 1.25rem; }
+  .premium-trust { align-items: flex-start; display: grid; gap: .7rem; padding: 1rem 1.25rem; }
+  .premium-trust span { border-left: 0; line-height: 1.35; padding-left: 0; }
+  .fleet-card-features { flex-wrap: wrap; }
+  .fleet-card-features span { white-space: normal; }
+  .fleet-promo p { max-width: 19rem; }
+}
 
 /* Replace pale catalog surfaces with a richer hospitality palette. */
 .premium-hero { background: #211326; color: #fff5f1; }
@@ -64,13 +81,13 @@
 .fleet-tabs { background: #633d45; }
 .fleet-tab { color: #f7c4d1; }
 .fleet-tab.active { background: #e58da8; color: #2b1d25; }
-.fleet-card { background: #fff5f1; box-shadow: 0 12px 28px rgba(42,24,32,.24); }
-.fleet-card:nth-child(2n) { background: #f2d4dc; }
-.fleet-card:nth-child(3n) { background: #e8c7b5; }
-.fleet-card-body h2 { color: #2b1d25; }
-.fleet-seats, .fleet-card-features span { color: #6b5560; }
-.fleet-price { color: #b85f78; }
-.fleet-card-features { border-color: rgba(43,29,37,.16); }
+.fleet-card { background: #633d45; box-shadow: 0 12px 28px rgba(22,10,28,.3); color: #fff5f1; }
+.fleet-card:nth-child(2n) { background: #70404d; }
+.fleet-card:nth-child(3n) { background: #84505c; }
+.fleet-card-body h2 { color: #fff5f1; }
+.fleet-seats, .fleet-card-features span { color: #f2d4dc; }
+.fleet-price { color: #f1a1b7; }
+.fleet-card-features { border-color: rgba(255,245,241,.24); }
 .fleet-extra { background: #2b1d25; }
 .fleet-extra-alt { background: #4b3038; }
 .fleet-extra-heading h2 { color: #fff5f1; }

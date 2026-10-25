@@ -129,12 +129,16 @@ body { background: #3b2729; color: var(--ink); }
 .vehicles-section .vehicle-group-title, .vehicles-section .eyebrow { color: #2b1d25; }
 .why-section { background: #4b3038; }
 .tours-section { background: #412b3c; }
-.review-section { background: #f8eee9; color: #2b1d25; }
-.review-section .eyebrow, .review-section blockquote { color: #2b1d25; }
-.contact-section { background: #ead1d5; color: #2b1d25; }
-.contact-section .eyebrow, .contact-section h2, .contact-section strong { color: #2b1d25; }
-.contact-section .contact-details span, .contact-section .contact-details small { color: #705967; }
-.contact-details strong { color: var(--ink); }
+.review-section { background: #4a3032; color: #fff5f1; }
+.review-section .eyebrow, .review-section h2, .review-section blockquote { color: #fff5f1; }
+.review-grid article { background: #633d45; color: #fff5f1; }
+.review-grid article:nth-child(2n) { background: #70404d; }
+.review-grid article > span { color: #f2d4dc; }
+.partner-band { background: #120b18; color: #fff5f1; }
+.contact-section { background: #362435; color: #fff5f1; }
+.contact-section .eyebrow, .contact-section h2, .contact-section strong { color: #fff5f1; }
+.contact-section .contact-details span, .contact-section .contact-details small { color: #d8c3cb; }
+.contact-details strong { color: #fff5f1; }
 @media (min-width: 700px) { .container { padding-left: 2rem; padding-right: 2rem; } .section { padding: 7rem 0; } .intro-grid, .contact-grid, .why-grid, .partner-content { grid-template-columns: 1fr 1fr; gap: 5rem; } .service-grid { grid-template-columns: repeat(2, 1fr); } .vehicle-grid, .tour-grid, .review-grid { grid-template-columns: repeat(3, 1fr); } .review-grid { grid-template-columns: repeat(2, 1fr); } .split-section { grid-template-columns: 1fr 1fr; } .split-image { min-height: 560px; } .split-copy { align-items: start; display: flex; flex-direction: column; justify-content: center; padding: 5rem; } }
 @media (min-width: 1100px) { .container { padding-left: 2rem; padding-right: 2rem; } .hero-content { padding-top: 10rem; } .service-grid { grid-template-columns: repeat(4, 1fr); } .vehicle-card img { height: 270px; } }
 @media (max-width: 699px) { .desktop-only { display: none; } }
